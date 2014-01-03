@@ -9,8 +9,8 @@ module Polylines
     def step_2
       @negative = current_value < 0 if encoding?
 
-      encode! { (current_value * 1e5).round }
-      decode! { current_value.to_f/1e5 }
+      encode! { (current_value * 1e6).round }
+      decode! { current_value.to_f / 1e6 }
     end
 
     def step_3
